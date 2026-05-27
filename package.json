@@ -1,5 +1,5 @@
 {
-  "name": "rentiav2",
+  "name": "RENTIA VALES PREMIUM",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^20.0.0",
     "@angular/platform-browser-dynamic": "^20.0.0",
     "@angular/router": "^20.0.0",
+    "@capacitor/android": "^7.4.2",
     "@capacitor/app": "7.0.1",
     "@capacitor/core": "7.4.2",
     "@capacitor/haptics": "7.0.1",

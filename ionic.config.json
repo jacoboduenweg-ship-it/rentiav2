@@ -1,7 +1,13 @@
 {
-  "name": "rentiav2",
+  "name": "RENTIA VALES PREMIUM",
   "integrations": {
     "capacitor": {}
   },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://169.197.183.51/rentia/api"
+    }
+  ],
   "type": "angular-standalone"
 }

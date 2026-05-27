@@ -1,0 +1,55 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      
+      <ion-title>Historial</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-content"></ion-menu-button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>
+     <b>HISTORIAL DE VALES:</b>
+    </ion-label>
+  </ion-item>
+
+  <ion-grid>
+
+
+    <ion-row *ngFor="let dato of datoslistavales">
+      <ion-col>
+        <b>FOLIO</b> <br>  
+        <ion-label>{{dato.folio}}</ion-label>
+      </ion-col>
+
+      <ion-col>
+        <b>CLIENTE</b> <br>
+        <ion-label>{{dato.nombrecliente}}</ion-label>
+      </ion-col>
+
+      <ion-col>
+        <b>FECHA</b> <br>
+        <ion-label>{{dato.fecha | date: 'dd/MM/yyyy'}}</ion-label>
+      </ion-col>
+
+      <ion-col>
+        <b>MONTO</b> <br>
+        <ion-label>${{dato.monto | number}}</ion-label>
+      </ion-col>
+
+      <ion-col> 
+        <b>PLAZO</b> <br>
+        <ion-label>{{dato.plazo}}</ion-label>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+
+</ion-content>
+
+

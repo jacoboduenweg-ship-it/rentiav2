@@ -1,0 +1,58 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      
+      <ion-title>Descarga recibo</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-content"></ion-menu-button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-header>
+
+  
+ 
+
+  <ion-progress-bar color="warning" type="indeterminate" *ngIf="showLoader"></ion-progress-bar>
+  <br>
+  <ion-progress-bar color="warning" type="indeterminate" reversed="true" *ngIf="showLoader"></ion-progress-bar>
+
+  <ion-item>
+    <ion-select placeholder="FOLIOS DISP." color="warning" (ionChange)="obtenerFolio($event)"  label="Selecciona vale" >
+
+      <ion-select-option  *ngFor="let dato of datos" value="{{dato.folio}}">{{dato.folio}} - {{dato.nombcomp}}</ion-select-option>
+ 
+    </ion-select>
+  </ion-item>
+
+
+    <ion-button (click) = "generarRecibo()" expand="block" color="danger">Descargar recibo</ion-button>
+<br>
+<br>
+    <div style="width:100%; height: 40%; background-color: white; " *ngIf="mostrarDiv">
+      <br>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 30px; color: black; text-indent: 2em;"><b>Recibo de cobro </b></ion-label>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 30px; color: black;"><b>Vale No. {{folio}}</b></ion-label>
+      <br>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Promotor(a): {{nombreDist}}</ion-label>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Cliente: {{nombcomp}}</ion-label>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Fecha de pago: {{fechapago}}</ion-label>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Abono {{numpago}} &nbsp; de {{numquincenas}}</ion-label>
+      <br>
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Pago: {{pagopesos}}</ion-label>
+      
+      &nbsp; &nbsp;<ion-label style="font-size: 20px; color: black;">Saldo: {{saldopesos}}</ion-label>
+
+    </div>
+
+
+
+</ion-content>

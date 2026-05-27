@@ -1,0 +1,70 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      
+      <ion-title>Buscar vale</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-content"></ion-menu-button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+
+  <ion-item>
+    <ion-input 
+    label="Folio" 
+    type="number" 
+    [(ngModel)]="numvale2" 
+    name="numvale2">
+  </ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="InfoVale()" color="danger">Buscar</ion-button>
+  <br>
+  <ion-item>
+    <ion-label>Num. de vale: {{numvale}}</ion-label> <br>
+    <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Num. de pagare: {{numpagare}}</ion-label> <br>
+    <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Cliente: {{cliente}}</ion-label> <br>
+    <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha de canje: {{fecha | date: 'dd/MM/yyyy'}} </ion-label> <br>
+    <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Vencimiento: {{vencimiento | date: 'dd/MM/yyyy'}}</ion-label> <br>
+    <br> 
+  </ion-item>  
+  <ion-item>
+    <ion-label>Status: {{status}}</ion-label> <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Monto vale: ${{montovale}}</ion-label> <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Num. de quincenas: {{quincenas}}</ion-label> <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Pago: ${{pago}}</ion-label> <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Numero pago: {{numpago}}</ion-label> <br>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha prox. de pago: {{fechapago | date: 'dd/MM/yyyy'}}</ion-label> <br>
+  </ion-item>
+
+</ion-content>
+
+
